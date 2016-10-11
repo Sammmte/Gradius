@@ -12,6 +12,7 @@ import Array;
  */
 class Player extends FlxSprite
 {
+	public var speed:Int = Reg.playerSpeed;
 	public var firstBullet:Shot;
 	public var secondBullet:Shot;
 	public var activeMissile:Missile;
@@ -19,12 +20,40 @@ class Player extends FlxSprite
 	public function new(X:Float=0, Y:Float=0, ?SimpleGraphic:Dynamic) 
 	{
 		super(X, Y, SimpleGraphic);
-		//makeGraphic(10, 10);
+		loadGraphic(AssetPaths.Submarine2__png, true, 30, 14);
+		
+		animation.add("sub1", [0], 8, false);
+		animation.add("sub2", [1], 8, false);
+		animation.add("sub3", [2], 8, false);
 	}
 	
 	override public function update(elapsed:Float):Void
 	{
 		super.update(elapsed);
+		Controls();
+	}
+	
+	
+	private function Controls():Void
+	{
+		movement();
+	}
+	
+	private function movement():Void {
+		if (FlxG.keys.pressed.LEFT && this.x > FlxG.camera.scroll.x+1) { x -= speed; } 
+		if (FlxG.keys.pressed.RIGHT && this.x < FlxG.camera.scroll.x+224) { x += speed; } 
+		if (FlxG.keys.pressed.UP && this.y > 0 ) { 
+			animation.play("sub2");
+			y -= speed;
+		}
+		if(FlxG.keys.pressed.DOWN && this.y < FlxG.height - this.height) {
+			animation.play("sub3");
+			y += speed;	
+		}
+		
+		fire();
+		
+		if (FlxG.keys.justReleased.UP || FlxG.keys.justReleased.DOWN){ animation.play("sub1"); }
 	}
 	
 	private function fire():Void {

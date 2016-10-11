@@ -27,8 +27,8 @@ class Shot extends FlxSprite
 	}
 	
 	public function Destruction() {
-		if (this.x + this.width < 0 || this.x + this.width > FlxG.width) {
-			//Reg.bulletCount--;
+		if (this.x + this.width < FlxG.camera.scroll.x+1 || this.x > FlxG.camera.scroll.x+256) {
+			Reg.bulletCount--;
 			destroy();
 		}
 	}
