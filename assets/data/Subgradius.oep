@@ -16,7 +16,7 @@
     <Width>25600</Width>
     <Height>240</Height>
   </LevelMaximumSize>
-  <Filename>C:\Users\David\Dropbox\ZIMAGE CAMPUS\GRADIUS\Subgradius.oep</Filename>
+  <Filename>C:\Users\David\Documents\GitHub\Gradius\assets\data\Subgradius.oep</Filename>
   <AngleMode>Radians</AngleMode>
   <CameraEnabled>true</CameraEnabled>
   <CameraSize>
@@ -39,10 +39,10 @@
       <ExportMode>CSV</ExportMode>
     </LayerDefinition>
     <LayerDefinition xsi:type="EntityLayerDefinition">
-      <Name>Player</Name>
+      <Name>Entities</Name>
       <Grid>
         <Width>16</Width>
-        <Height>32</Height>
+        <Height>16</Height>
       </Grid>
       <ScrollFactor>
         <X>1</X>
@@ -60,17 +60,6 @@
         <Y>1</Y>
       </ScrollFactor>
       <ExportMode>CSV</ExportMode>
-    </LayerDefinition>
-    <LayerDefinition xsi:type="EntityLayerDefinition">
-      <Name>Enemies</Name>
-      <Grid>
-        <Width>16</Width>
-        <Height>16</Height>
-      </Grid>
-      <ScrollFactor>
-        <X>1</X>
-        <Y>1</Y>
-      </ScrollFactor>
     </LayerDefinition>
     <LayerDefinition xsi:type="TileLayerDefinition">
       <Name>OtherTiles</Name>
@@ -88,7 +77,7 @@
   <Tilesets>
     <Tileset>
       <Name>Background</Name>
-      <FilePath>Background.png</FilePath>
+      <FilePath>..\images\Background.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>
@@ -97,7 +86,7 @@
     </Tileset>
     <Tileset>
       <Name>Tiles</Name>
-      <FilePath>Tiles.png</FilePath>
+      <FilePath>..\images\Tiles.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>
@@ -106,7 +95,7 @@
     </Tileset>
     <Tileset>
       <Name>OtherTiles</Name>
-      <FilePath>OtherTiles.png</FilePath>
+      <FilePath>..\images\OtherTiles.png</FilePath>
       <TileSize>
         <Width>16</Width>
         <Height>16</Height>
@@ -115,7 +104,67 @@
     </Tileset>
   </Tilesets>
   <EntityDefinitions>
-    <EntityDefinition Name="NewObject0" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+    <EntityDefinition Name="Player" Limit="1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Size>
+      <Origin>
+        <X>0</X>
+        <Y>0</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Rectangle" ImagePath="" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="Enemy1" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Size>
+      <Origin>
+        <X>0</X>
+        <Y>0</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Rectangle" ImagePath="" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="Enemy2" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Size>
+      <Origin>
+        <X>0</X>
+        <Y>0</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Rectangle" ImagePath="" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="Enemy3" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
+      <Size>
+        <Width>16</Width>
+        <Height>16</Height>
+      </Size>
+      <Origin>
+        <X>0</X>
+        <Y>0</Y>
+      </Origin>
+      <ImageDefinition DrawMode="Rectangle" ImagePath="" Tiled="false">
+        <RectColor A="255" R="255" G="0" B="0" />
+      </ImageDefinition>
+      <ValueDefinitions />
+      <NodesDefinition Enabled="false" Limit="-1" DrawMode="None" Ghost="false" />
+    </EntityDefinition>
+    <EntityDefinition Name="Boss" Limit="-1" ResizableX="false" ResizableY="false" Rotatable="false" RotateIncrement="15">
       <Size>
         <Width>16</Width>
         <Height>16</Height>
